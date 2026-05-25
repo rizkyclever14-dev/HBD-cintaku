@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love💖</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+      animation: fade 2s ease;
+    }
+
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 500px;
+      margin: auto;
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: black;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .heart {
+      position: absolute;
+      color: rgba(255,255,255,0.5);
+      animation: float 5s linear infinite;
+      font-size: 20px;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="CantikManis.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <img src="IMG-20260525-WA0012.jpg" alt="foto" />
+
+    <h1>Happy Birthday 💖</h1>
+
+    <p>
+      Selamat ulang tahun yaa ✨<br><br>
+      Semoga semua hal baik selalu datang ke hidup kamu,
+      makin bahagia, makin cantik, makin kuat jalanin semuanya.
+      Terima kasih udah hadir dan jadi orang spesial buat aku💕
+    </p>
+
+    <button onclick="alert('Aku cuma mau bilang... kamu berharga banget 💖')">
+      Klik disini
+    </button>
+  </div>
+
+  <script>
+    for(let i = 0; i < 20; i++) {
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+      heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
